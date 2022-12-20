@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 import { createError } from "../utils/error.js";
 
 export const register = async (req, res, next) => {
+  console.log(req.body);
   try {
     const { fullName, email, password } = req.body;
     const salt = bcrypt.genSaltSync(10);
